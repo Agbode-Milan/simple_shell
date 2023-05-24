@@ -1,28 +1,9 @@
 #include "shell.h"
-#include <stdlib.h>
 
 /**
- * _eputs - this prints an input string
- * @str: this is the string to be printed
- *
- * Return: Nothing
- */
-void _eputs(char *str)
-{
-	int i = 0;
-
-	if (!str)
-		return;
-	while (str[i] != '\0')
-	{
-		_eputchar(str[i]);
-		i++;
-	}
-}
-
-/**
- * _eputchar - this writes the character c to stderr
- * @c: this is the character to print
+ * _eputchar - _eputchar is used to write
+ *              the character c to stderr
+ * @c: The character to print
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
@@ -43,9 +24,29 @@ int _eputchar(char c)
 }
 
 /**
- * _putfd - this writes the character c to given fd
- * @c: The character to print
- * @fd: The filedescriptor to write to
+ * _eputs - _eputs is used to print an input string
+ * @str: the string to be printed in our case
+ *
+ * Return: Nothing
+ */
+void _eputs(char *str)
+{
+	int i = 0;
+
+	if (!str)
+		return;
+	while (str[i] != '\0')
+	{
+		_eputchar(str[i]);
+		i++;
+	}
+}
+
+/**
+ * _putfd - _putfd is used to write the character
+ *              c to given fd
+ * @c: is the character to print in our case
+ * @fd: The filedescriptor to write to in this case
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
@@ -66,9 +67,11 @@ int _putfd(char c, int fd)
 }
 
 /**
- * _putsfd - this prints an input string
- * @str: this is the string to be printed
- * @fd: the filedescriptor to write to
+ * _putsfd - _putsfd is used to print an input string
+ * 
+ * @str: @str is the string to be printed in
+ *          our current case
+ * @fd: @fd is the filedescriptor to write to in this case
  *
  * Return: the number of chars put
  */
@@ -84,4 +87,3 @@ int _putsfd(char *str, int fd)
 	}
 	return (i);
 }
-
