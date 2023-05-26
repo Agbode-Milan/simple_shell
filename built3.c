@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * _myhistory - shows history list, one command per line, starts at 0.
- *
- * @info: This is the structure that has in it potential arguments.
- *
- *  Return: Always reurns 0 if succesful
+ * _myhistory - displays the history list, one command by line, preceded
+ *              with line numbers, starting at 0.
+ * @info: Structure containing potential arguments. Used to maintain
+ *        constant function prototype.
+ *  Return: Always 0
  */
 int _myhistory(info_t *info)
 {
@@ -14,11 +14,11 @@ int _myhistory(info_t *info)
 }
 
 /**
- * unset_alias - sets the in questions alias to string
- * @info: parameter structure
- * @str: the string alias in question
+ * unset_alias - sets alias to string
+ * @info: parameter struct
+ * @str: the string alias
  *
- * Return: Always 0 on success, 1 if not successful
+ * Return: Always 0 on success, 1 on error
  */
 int unset_alias(info_t *info, char *str)
 {
@@ -37,11 +37,11 @@ int unset_alias(info_t *info, char *str)
 }
 
 /**
- * set_alias - it aims to set alias to string
- * @info: It is used to constant function prototype.
- * @str: string alias
+ * set_alias - sets alias to string
+ * @info: parameter struct
+ * @str: the string alias
  *
- * Return: returns 0 on success, 1 if not succesful
+ * Return: Always 0 on success, 1 on error
  */
 int set_alias(info_t *info, char *str)
 {
@@ -58,10 +58,10 @@ int set_alias(info_t *info, char *str)
 }
 
 /**
- * print_alias - it continues to print an alias string
- * @node: alias node
+ * print_alias - prints an alias string
+ * @node: the alias node
  *
- * Return: Always 0 on success, 1 on if not successful
+ * Return: Always 0 on success, 1 on error
  */
 int print_alias(list_t *node)
 {
@@ -71,7 +71,7 @@ int print_alias(list_t *node)
 	{
 		p = _strchr(node->str, '=');
 		for (a = node->str; a <= p; a++)
-		_putchar(*a);
+			_putchar(*a);
 		_putchar('\'');
 		_puts(p + 1);
 		_puts("'\n");
@@ -81,10 +81,10 @@ int print_alias(list_t *node)
 }
 
 /**
- * _myalias - the alias builtin (man alias)
- * @info: This is the structure that has in it potential arguments.
- *
- *  Return: returns 0 always
+ * _myalias - mimics the alias builtin (man alias)
+ * @info: Structure containing potential arguments. Used to maintain
+ *          constant function prototype.
+ *  Return: Always 0
  */
 int _myalias(info_t *info)
 {

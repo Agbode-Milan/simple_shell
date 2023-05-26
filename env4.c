@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * _myenv - we use env to print the current environment.
- * @info: This is the structure that has in it potential arguments.
- *          It is used to constant function prototype.
- * Return: Return is always 0.
+ * _myenv - prints the current environment
+ * @info: Structure containing potential arguments. Used to maintain
+ *          constant function prototype.
+ * Return: Always 0
  */
 int _myenv(info_t *info)
 {
@@ -13,12 +13,11 @@ int _myenv(info_t *info)
 }
 
 /**
- * _getenv - geytenv will get us the value of an environ variable
- * @info: This is the structure that has in it potential arguments.
- *          It is used to constant function prototype.
+ * _getenv - gets the value of an environ variable
+ * @info: Structure containing potential arguments. Used to maintain
  * @name: env var name
  *
- * Return: Return is always 0.
+ * Return: the value
  */
 char *_getenv(info_t *info, const char *name)
 {
@@ -38,10 +37,8 @@ char *_getenv(info_t *info, const char *name)
 /**
  * _mysetenv - Initialize a new environment variable,
  *             or modify an existing one
- * 
- * @info: This is the structure that has in it potential arguments.
- *        It is used to constant function prototype.
- * 
+ * @info: Structure containing potential arguments. Used to maintain
+ *        constant function prototype.
  *  Return: Always 0
  */
 int _mysetenv(info_t *info)
@@ -57,12 +54,10 @@ int _mysetenv(info_t *info)
 }
 
 /**
- * _myunsetenv - The unsetenv removes any environment variable
- * 
- * @info: This is the structure that has in it potential arguments.
- *        It is used to constant function prototype.
- * 
- *  Return: returns 0 upon success.
+ * _myunsetenv - Remove an environment variable
+ * @info: Structure containing potential arguments. Used to maintain
+ *        constant function prototype.
+ *  Return: Always 0
  */
 int _myunsetenv(info_t *info)
 {
@@ -80,12 +75,10 @@ int _myunsetenv(info_t *info)
 }
 
 /**
- * populate_env_list - Here populate_env_list populates env linked list
- * 
- * @info: This is the structure that has in it potential arguments.
- *          It is used to constant function prototype.
- * 
- * Return: will always 0 if successful.
+ * populate_env_list - populates env linked list
+ * @info: Structure containing potential arguments. Used to maintain
+ *          constant function prototype.
+ * Return: Always 0
  */
 int populate_env_list(info_t *info)
 {
