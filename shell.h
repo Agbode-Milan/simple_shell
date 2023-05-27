@@ -4,39 +4,64 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/wait.h>
-#include <sys/stat.h>
-#include <sys/types.h>
 #include <string.h>
-#include <stdarg.h>
+#include <sys/wait.h>
+#include <sys/types.h>
 #include <errno.h>
-char *prepbuff();
-void pthexp(char *rel, char *dest);
-char *trimbuff(char *buff);
-int _strlen(char *str);
-char *afterpath(char **sargs, char **argv, int line);
-void prerr(char **argv, char **sargs, int line, int err);
-char **tokenize(char *buff, char delim);
-char *cmdcall(char **argv, char **env, char **sargs, int line, int *err);
-char *_strcpy(char *dest, char *src);
-int _strcmp(char *s1, char *s2);
-int _strncmp(char *s1, char *s2, int n);
-char *_strcat(char *dest, char *src);
-void chexe(char *cmd, char **sargs, char **env, int *err);
-void exitbltin(char *buff, char **argv, int line, int *err);
-void envbltin(char *buff, char **env);
+#include <stddef.h>
+#include <sys/stat.h>
+#include <signal.h>
 
-/* OUR PRINTF FUNCTIONS USED IN THIS CODE */
+int _putchar(char c);
+void _puts(char *str);
+int _strlen(char *s);
+char *_strdup(char *str);
+char *concat_all(char *name, char *sep, char *value);
 
-int _printf(int fd, const char *format, ...);
-void _puts(int fd, char *str);
-int _putchar(int fd, char c);
-char *_itoa(int value, char *buffer, int base);
-int _abs(int a);
-char *_reverse(char *buffer, int i, int j);
-void _swap(char *x, char *y);
-int print_conv(int fd, const char *str, va_list arg);
-int print_s(int fd, va_list arg);
+char **splitstring(char *str, const char *delim);
+void execute(char **argv);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+
+
+extern char **environ;
+
+/**
+ * struct list_path - Linked list containing PATH directories
+ * @dir: directory in path
+ * @p: pointer to next node
+ */
+typedef struct list_path
+{
+	char *dir;
+	struct list_path *p;
+} list_path;
+
+
+char *_getenv(const char *name);
+list_path *add_node_end(list_path **head, char *str);
+list_path *linkpath(char *path);
+char *_which(char *filename, list_path *head);
+
+/**
+ * struct mybuild - pointer to function with corresponding buildin command
+ * @name: buildin command
+ * @func: execute the buildin command
+ */
+typedef struct mybuild
+{
+	char *name;
+	void (*func)(char **);
+} mybuild;
+
+void(*checkbuild(char **arv))(char **arv);
 int _atoi(char *s);
+void exitt(char **arv);
+void env(char **arv);
+void _setenv(char **arv);
+void _unsetenv(char **arv);
+
+void freearv(char **arv);
+void free_list(list_path *head);
+
 
 #endif
