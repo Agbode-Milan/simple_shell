@@ -1,12 +1,15 @@
-#include "holberton.h"
+#include "shell.h"
 
 /**
- * _itoa - convert integer to string
- * @value: value to be converted to a string
+ * _itoa - the itoa is used to
+ *          convert integer to string
+ *
+ * @value: is the subject value to be converted to a string
  * @buffer: array to store result
  * @base: numerical base
  *
- * Return: pointer to resulting null-term string
+ * Return: Always returns a pointer
+ *          to resulting null-term string
  */
 
 char *_itoa(int value, char *buffer, int base)
@@ -35,10 +38,11 @@ char *_itoa(int value, char *buffer, int base)
 }
 
 /**
- * _abs - printing absolute value of integer
- * @a: char to check value of
+ * _abs - this function focuses on
+ *          printing absolute value of integer
+ * @a: char we have to check value of
  *
- * Return: prints absolute value of numbers
+ * Return: always returns prints absolute value of numbers
  */
 
 int _abs(int a)
@@ -50,12 +54,15 @@ int _abs(int a)
 }
 
 /**
- * _reverse - Reverses buffer[i..j]
- * @buffer: buffer to be reversed
- * @i: first location in buffer
- * @j: ending location
+ * _reverse - this function focuses on
+ *              Reversing the buffer[i..j]
  *
- * Return: pointer to reversed buffer
+ * @buffer: is the subject buffer being reversed
+ * @i: first location in buffer
+ * @j: the last location
+ *
+ * Return: always always returns a
+ *          pointer to reversed buffer
  */
 
 char *_reverse(char *buffer, int i, int j)
@@ -66,11 +73,12 @@ char *_reverse(char *buffer, int i, int j)
 }
 
 /**
- * _swap - Swaps two numbers
- * @x: first number
- * @y: second number
+ * _swap - this function sets to Swap two numbers
  *
- * Return: void
+ * @x: no 1
+ * @y: no 2
+ *
+ * Return: returns void
  */
 
 void _swap(char *x, char *y)
@@ -82,8 +90,9 @@ void _swap(char *x, char *y)
 }
 
 /**
- * _atoi - converts string to integer
- * @s: string to convert
+ * _atoi - simply converts
+ *      string to integer
+ * @s: the subject string to convert
  *
  * Return: converted string
  */

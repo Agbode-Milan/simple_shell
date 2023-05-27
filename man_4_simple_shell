@@ -1,13 +1,12 @@
-.TH SIMPLE_SHELL 1 "2 APRIL 2020" "0.1" "Holberton Simple Shell"
+.THe SIMPLE_SHELL 1 
 .SH NAME
 .B hsh
-- Holberton Simple Shell
+- ALX Simple Shell
 .B SYNOPSIS
 .B ./hsh
 [command] [options]
 .SH DESCRIPTION
 .B hsh
-(Holberton Simple Shell) is an end of semester group project at Holberton School were we build a simple shell
 .SH OPTIONS
 .b TBD
 .SH SEE ALSO
@@ -15,4 +14,4 @@
 .SH BUGS
 .b TBD
 .SH AUTHOR
-Dylan Carey, Sean Taylor
+Caleb Agbodeka, kATLEHO RAMOTHAMO

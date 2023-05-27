@@ -1,11 +1,12 @@
-#include "holberton.h"
+#include "shell.h"
 
 /**
- * tokenize - parse buff into tokens
- * @buff: pointer to be tokenized
+ * tokenize - this is the function that will
+ *              parse buff into tokens
+ * @buff: the pointer that has to be tokenized
  * @delim: delimiter to split at
  *
- * Return: pointer to array of tokens
+ * Return: returns the pointer to array of tokens
  */
 
 char **tokenize(char *buff, char delim)
@@ -30,8 +31,10 @@ char **tokenize(char *buff, char delim)
 }
 
 /**
- * pthexp - expands a relative path to an absolute path
- * @rel: relative path to expand
+ * pthexp - this function aims to expand a relative
+ *          path to an absolute path
+ * @rel: rel is the absolute
+ *          relative path to expand
  * @dest: buffer to save absolute path to
  */
 void pthexp(char *rel, char *dest)
@@ -69,10 +72,12 @@ void pthexp(char *rel, char *dest)
 }
 
 /**
- * trimbuff - trims the spaces from the beginning and end of buff
- * @buff: buff to trim
+ * trimbuff - this function trims the
+ *          spaces from the beginning and end of buff
+ * @buff: buff is the buff to be trimed
  *
- * Return: pointer to realloced buff with trimmed result
+ * Return: always returns a pointer to
+ *          realloced buff with trimmed result
  */
 char *trimbuff(char *buff)
 {
@@ -124,11 +129,12 @@ char *afterpath(char **sargs, char **argv, int line)
 }
 
 /**
- * prerr - prints error messages
- * @argv: prog args
- * @line: line number
- * @sargs: command args
- * @err: error number
+ * prerr - prints error messages to stdio
+ *
+ * @argv: prog arguments
+ * @line: line #
+ * @sargs: command arguments
+ * @err: error #
  */
 void prerr(char **argv, char **sargs, int line, int err)
 {

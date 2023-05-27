@@ -1,10 +1,11 @@
-#include "holberton.h"
+#include "shell.h"
 
 /**
- * _strlen - find length of given stirng
- * @str: string to find length of
+ * _strlen - stringlength function finds the length
+ *              of given stirng
+ * @str: the subject string to find length of
  *
- * Return: length of string less the null char
+ * Return: length of string minus the null char
  */
 
 int _strlen(char *str)
@@ -21,11 +22,11 @@ int _strlen(char *str)
 }
 
 /**
- * _strcpy - copies src string to dest string
+ * _strcpy - string copy function src string to dest string
  * @dest: destination of copying
  * @src: string to be copied
  *
- * Return: pointer to dest
+ * Return: always returns pointer to dest
  */
 
 char *_strcpy(char *dest, char *src)
@@ -41,11 +42,11 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * _strcmp - compares two strings
- * @s1: first string
- * @s2: second string
+ * _strcmp - string compare function compares two strings
+ * @s1: string 1
+ * @s2: string 2
  *
- * Return: 0 if same OR ascii value if different
+ * Return: will return0 if same OR ascii value if different
  */
 
 int _strcmp(char *s1, char *s2)
@@ -64,12 +65,14 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * _strncmp - comapres two string to the nth character
- * @s1: first string
- * @s2: second string
- * @n: number of characters to compare
+ * _strncmp -  this one now comapres
+ *              two string to the nth character
+ * @s1: string 1
+ * @s2: string 2
+ * @n: # of characters to compare
  *
- * Return: 0 if same or ascii value difference if different
+ * Return: will return 0 if same or ascii
+ * value difference if different
  */
 
 int _strncmp(char *s1, char *s2, int n)
@@ -88,8 +91,9 @@ int _strncmp(char *s1, char *s2, int n)
 }
 
 /**
- * _strcat - appends src string to dest string
+ * _strcat - this one will appends src string to dest string
  * @dest: string being appened
+ *
  * @src: string to be appended to dest
  *
  * Return: appended dest string

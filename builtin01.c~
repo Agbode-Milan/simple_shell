@@ -1,16 +1,17 @@
-#include "holberton.h"
+#include "shell.h"
 
 /**
- * exitbltin - builtin function to exit shell
- * @buff: line containing exit command
- * @argv: args
- * @line: line number
+ * thexitbuiltin - It is a builtin function in the
+ *                  IDE to exit shell
+ * @buff: this is the line containing exit command in use
+ * @argv: args or arguments
+ * @line: the line number
  * @err: custom errno
  *
  * Return: void
  */
 
-void exitbltin(char *buff, char **argv, int line, int *err)
+void thexitbuiltin(char *buff, char **argv, int line, int *err)
 {
 	int i, f;
 	char **exitcode;
@@ -43,14 +44,16 @@ void exitbltin(char *buff, char **argv, int line, int *err)
 }
 
 /**
- * envbltin - print enviromental variables
- * @buff: line containing command
- * @env: dbl pointer containing enviromental variables
+ * the_envbltin - with this function, we are able
+ *                  do print outs
+ * @buff: @buff is the line that contains the command
+ * @env: @env is a double pointer that contains
+ *          enviromental variables
  *
  * Return: void
  */
 
-void envbltin(char *buff, char **env)
+void the_envbltin(char *buff, char **env)
 {
 	int i;
 

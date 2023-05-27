@@ -1,5 +1,5 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef SHELL_H
+#define SHELL_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +10,12 @@
 #include <string.h>
 #include <stdarg.h>
 #include <errno.h>
-
+char *prepbuff();
+void pthexp(char *rel, char *dest);
+char *trimbuff(char *buff);
+int _strlen(char *str);
+char *afterpath(char **sargs, char **argv, int line);
+void prerr(char **argv, char **sargs, int line, int err);
 char **tokenize(char *buff, char delim);
 char *cmdcall(char **argv, char **env, char **sargs, int line, int *err);
 char *_strcpy(char *dest, char *src);
@@ -20,14 +25,8 @@ char *_strcat(char *dest, char *src);
 void chexe(char *cmd, char **sargs, char **env, int *err);
 void exitbltin(char *buff, char **argv, int line, int *err);
 void envbltin(char *buff, char **env);
-char *prepbuff();
-void pthexp(char *rel, char *dest);
-char *trimbuff(char *buff);
-int _strlen(char *str);
-char *afterpath(char **sargs, char **argv, int line);
-void prerr(char **argv, char **sargs, int line, int err);
 
-/* PRINTF FUNCTIONS */
+/* OUR PRINTF FUNCTIONS USED IN THIS CODE */
 
 int _printf(int fd, const char *format, ...);
 void _puts(int fd, char *str);
@@ -40,4 +39,4 @@ int print_conv(int fd, const char *str, va_list arg);
 int print_s(int fd, va_list arg);
 int _atoi(char *s);
 
-#endif /* HOLBERTON_H */
+#endif

@@ -1,12 +1,13 @@
-#include "holberton.h"
+#include "shell.h"
 
 /**
  * main - run basic loop of shell
- * @argc: argument count
- * @argv: dbl pointer of arguments
+ * 			it is the entry of the code
+ * @argc: counts the subject argument
+ * @argv: the double pointer of arguments
  * @env: dbl pointer of enviroment variables
  *
- * Return: 0 if successful OR 1 if failure
+ * Return: will have to 0 if successful OR 1 if failure
  */
 
 int main(int argc, char **argv, char **env)
@@ -43,7 +44,8 @@ int main(int argc, char **argv, char **env)
 }
 
 /**
- * prepbuff - prep the buff for shell
+ * prepbuff - this prepares the buffer
+ * 				for shell
  *
  * Return: buff that is prepped for shell
  */
@@ -75,10 +77,13 @@ char *prepbuff()
 }
 
 /**
- * chexe - fork the child and execute the command
- * @cmd: command to be executed
- * @sargs: dbl pointer containing arguments for command
- * @env: dbl pointer containing enviromental variables
+ * chexe - it forks the child and
+ * 			executes the command
+ * @cmd: command thats going to be executed
+ * @sargs: dbl pointer containing
+ * 				arguments for command
+ * @env: dbl pointer containing
+ * 			enviromental variables
  * @err: custom errno
  *
  * Return: 0 if successful OR -1 if failure
@@ -99,14 +104,19 @@ void chexe(char *cmd, char **sargs, char **env, int *err)
 }
 
 /**
- * cmdcall - get command to be executed
- * @argv: dbl pointer containing array of arguments
- * @env: dbl pointer containing enviromental variables
- * @sargs: dbl pointer containing tokenized shell arguments
+ * cmdcall - this is the function to
+ * 			get command to be executed
+ * @argv: dbl pointer containing
+ * 			array of arguments
+ * @env: dbl pointer containing
+ * 			enviromental variables
+ * @sargs: dbl pointer containing tokenized
+ * 				shell arguments
  * @line: line number
  * @err: custom errno
  *
- * Return: concatenated pointer containing working command
+ * Return: on success concatenated pointer
+ * 			containing working command
  */
 
 char *cmdcall(char **argv, char **env, char **sargs, int line, int *err)

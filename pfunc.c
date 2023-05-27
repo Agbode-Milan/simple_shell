@@ -1,11 +1,12 @@
-#include "holberton.h"
+#include "shell.h"
 
 /**
- * _printf - prinnt string passed
- * @fd: file descriptor to print to
+ * _printf - prints the string passed in any
+ *              function
+ * @fd: file descriptor to print to be printed on
  * @format: string being passed to be printed
  *
- * Return: char count
+ * Return: always returns the char count on succeess
  */
 
 int _printf(int fd, const char *format, ...)
@@ -38,11 +39,11 @@ int _printf(int fd, const char *format, ...)
 }
 
 /**
- * _puts - Prints the string using _putchar
- * @fd: file descriptor to print to
+ * _puts - Prints the subject string using _putchar
+ * @fd: it is the file descriptor to print to
  * @str:	Input string
  *
- * Return: string printed
+ * Return: always returning the string printed on success
  */
 void _puts(int fd, char *str)
 {
@@ -54,9 +55,11 @@ void _puts(int fd, char *str)
 }
 
 /**
- * _putchar - writes char to stdout
- * @fd: file descriptor to print to
- * @c: input char
+ * _putchar - writes char to stdout better known
+ *              as standard output
+ * @fd: file descriptor you have
+ *          to print to
+ * @c: input character
  *
  * Return: Char printed to stdout;
  */
@@ -66,12 +69,14 @@ int _putchar(int fd, char c)
 }
 
 /**
- * print_conv - takes string and use correct conversion
+ * print_conv - takes string and
+ *              use correct conversion
  * @fd: file descriptor to print to
  * @str: input string
  * @arg: input argument from list
  *
- * Return: count
+ * Return: It will always return the count
+ *          on success
  */
 
 int print_conv(int fd, const char *str, va_list arg)
@@ -115,11 +120,13 @@ int print_conv(int fd, const char *str, va_list arg)
 }
 
 /**
- * print_s - prints tring after conversion specifier
- * @fd: file descriptor to print to
+ * print_s - prints the string
+ *          after conversion specifier
+ * @fd: subject file descriptor to print to
  * @arg: input argument
  *
- * Return: length of string
+ * Return: always returns
+ *          length of string on success
  */
 
 int print_s(int fd, va_list arg)
